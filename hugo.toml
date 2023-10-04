@@ -1,4 +1,4 @@
-baseURL = 'https://larrycancode.org/'
+baseURL = 'https://www.larrycancode.com/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
