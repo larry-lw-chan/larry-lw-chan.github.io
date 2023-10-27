@@ -11,9 +11,14 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="navbar navbar-expand-md py-1">
+  <nav class="navbar navbar-expand-md py-1" id="header-nav">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <!-- Logo Goes Here -->
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.svg" alt="Site Logo"id="logo">
+      </a>
+
+      <!-- Menu Code -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,8 +40,8 @@ Renders a menu for the given menu ID.
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" 
+    <li class="nav-item ms-md-3">
+      <a class="nav-link" aria-current="page" 
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
