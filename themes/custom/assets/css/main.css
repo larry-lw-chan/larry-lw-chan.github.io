@@ -37,6 +37,7 @@ a {
 .navbar-nav .nav-link {
   color:var(--link-color);
   font-weight: 900;
+  font-size: 1.1rem;
 }
 
 
