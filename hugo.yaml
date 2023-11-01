@@ -1,0 +1,20 @@
+baseURL: https://www.larrycancode.com/
+languageCode: en-us
+title: My New Hugo Site
+theme: custom
+publishDir: docs
+
+menu:
+  main:
+  - name: about
+    URL: /
+    weight: 1
+  - name: projects
+    URL: /projects
+    weight: 2
+  - name: blogs
+    URL: /posts
+    weight: 3
+  - name: contact
+    url: /contact
+    weight: 4
